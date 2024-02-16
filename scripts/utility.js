@@ -12,16 +12,16 @@ function generateAlphabet() {
   // get or create alphabet arrey
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
   const makeArrey = alphabet.split('');
-  console.log(makeArrey);
+  //console.log(makeArrey);
 
   // generate random number with  round
   const randomNumber = Math.random()*26;
   const index = Math.round(randomNumber);
-  console.log(randomNumber);
+  //console.log(randomNumber);
 
   // get random alphabet of this arrey
    const randomAlphabet = makeArrey[index];
-   console.log(randomAlphabet);
+   //console.log(randomAlphabet);
    return randomAlphabet;
 }
 
@@ -34,4 +34,22 @@ function setBackgroundColorById(elementId) {
 function removeBackgroundColorById(elementId) {
    const element = document.getElementById(elementId);
    element.classList.remove('bg-orange-400');
+}
+
+function getTextElementValueById(elementId) {
+  const element = document.getElementById(elementId);
+  const elementValueText = element.innerText;
+  const value = parseInt(elementValueText);
+  return value;
+}
+
+function setTextElementValueById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
+}
+
+function getElementTextById(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.innerText;
+  return text;
 }
